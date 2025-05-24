@@ -5,6 +5,8 @@ Some random bash script(s)
  - [Mass converting images to WebP](#mass-converting-images-to-webp)
  - [Video Backgrounds](#video-backgrounds)
  - [Mass converting images to WebP with ls](#mass-converting-images-to-webp-with-ls)
+ - [Mass converting images to WebP with find](#mass-converting-images-to-webp-with-find)
+
 
 ## Mass converting images to WebP
 
@@ -24,7 +26,7 @@ When no argument is specified, defaults to `./`.
 
 ### Requirements:
 
-Needs mogrify from imagemagick to work built with support for webp, png, gif, and heic.
+Needs mogrify from ImageMagick to work built with support for webp, png, gif, and heic.
 
 ## Video Backgrounds
 
@@ -81,4 +83,24 @@ Depth is to be specified as 1 or higher.
 
 ### Requirements:
 
-Needs mogrify from imagemagick to work built with support for webp, png, gif, and heic.
+Needs mogrify from ImageMagick to work built with support for webp, png, gif, and heic.
+
+## Mass converting images to WebP With find
+
+Same as the ls one but with find and is faster when going lower than 1 dir in. This will probably also be the last variation of the conversion to WebP scripts.
+
+### Usage:
+
+```
+./ConvertToWebPWfind.sh
+./ConvertToWebPWfind.sh startingDirectory
+./ConvertToWebPWfind.sh startingDirectory depth
+```
+
+### Notes:
+
+When no argument is specified, the path defaults to `./` and depth is max.
+
+### Requirements:
+
+Needs mogrify from ImageMagick to work built with support for webp, png, gif, and heic.
