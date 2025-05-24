@@ -20,7 +20,7 @@ drawWSleep() {
    i=$((i+1))
   done
   #have to eval for correct image path/name
-  eval "feh --bg-$scale $feh_cmd"
+  eval "feh --no-fehbg -p --bg-$scale $feh_cmd"
   sleep $seconds
  done
 }
@@ -42,7 +42,7 @@ drawWoSleep() {
    i=$((i+1))
   done
   #have to eval for correct image path/name
-  eval "feh --bg-$scale $feh_cmd"
+  eval "feh --no-fehbg -p --bg-$scale $feh_cmd"
  done 
 }
 
@@ -116,7 +116,7 @@ i=0
 videoCount="${#videos[@]}"
 while [[ $i !=  $videoCount ]]; do
  echo "Working on: ${videos[$i]}"
- ffmpeg -loglevel warning -i "${videos[$i]}" -q:v 5 -vf "scale=${resolutions[$i]},fps=$framerate" ~/.desktopBackground/"$i"_%0d.jpg
+ ffmpeg -loglevel warning -i "${videos[$i]}" -q:v 5 -vf "scale=${resolutions[$i]},fps=${framerate[$i]}" ~/.desktopBackground/"$i"_%0d.jpg
  i=$((i+1))
 done
 

@@ -19,11 +19,11 @@ Why to WebP (especially when heic is smaller) because thats what Jellyfin suppor
 
 ### Notes:
 
-When no argument is specified, defaults to `./`
+When no argument is specified, defaults to `./`.
 
 ### Requirements:
 
-Needs mogrify from imagemagick to work built with support for webp, png, gif, and heic
+Needs mogrify from imagemagick to work built with support for webp, png, gif, and heic.
 
 ## Video Backgrounds
 
@@ -60,3 +60,24 @@ Options (the `-?` part) are not case sensitive.
 ### Requirments:
 
 Needs ffmpeg compiled with jpg support and support for whatever video formats and encoding intended to be used. feh with jpg support is also needed to display the wallpaper.
+
+## Mass converting images to WebP With ls
+
+This one uses ls instead of inodes. This one is faster than the other one testing on my machine.
+
+### Usage:
+
+```
+./ConvertToWebPWls.sh
+./ConvertToWebPWls.sh startingDirectory
+./ConvertToWebPWls.sh startingDirectory depth
+```
+
+### Notes:
+
+When no argument is specified, the path defaults to `./` and the depth is 1.
+Depth is to be specified as 1 or higher.
+
+### Requirements:
+
+Needs mogrify from imagemagick to work built with support for webp, png, gif, and heic.
