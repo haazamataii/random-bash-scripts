@@ -4,6 +4,7 @@ Some random bash script(s)
 
  - [Mass converting images to WebP](#converting-images-to-webp)
  - [Video Backgrounds](#video-backgrounds)
+ - [Mass converting images to WebP](#converting-images-to-webp-with-ls)
 
 ## Mass converting images to WebP
 
