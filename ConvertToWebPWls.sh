@@ -39,7 +39,7 @@ while [[ "$i" != "$depth" ]]; do
 
   #mogrify/convert the files, then delete originals
   echo "Converting to WebP: $dir"
-  mogrify -format webp -define webp:lossless=true *.[Pp][Nn][Gg] *.[Gg][Ii][Ff] *.[Hh][Ee][Ii][Cc] > /dev/null 2>&1 #convert lossless format to lossless WebP
+  mogrify -format webp -define webp:lossless=true -define webp:method=6 *.[Pp][Nn][Gg] *.[Gg][Ii][Ff] *.[Hh][Ee][Ii][Cc] > /dev/null 2>&1 #convert lossless format to lossless WebP
   rm *.[Pp][Nn][Gg] *.[Gg][Ii][Ff] *.[Hh][Ee][Ii][Cc] > /dev/null 2>&1 #Remove old imgs
  done
  cd "$work"

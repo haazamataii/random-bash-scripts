@@ -6,7 +6,7 @@ Some random bash script(s)
  - [Video Backgrounds](#video-backgrounds)
  - [Mass converting images to WebP with ls](#mass-converting-images-to-webp-with-ls)
  - [Mass converting images to WebP with find](#mass-converting-images-to-webp-with-find)
-
+ - [Optimizing JPEG and WebP images](#optimizing-jpeg-and-webp-images)
 
 ## Mass converting images to WebP
 
@@ -104,3 +104,24 @@ When no argument is specified, the path defaults to `./` and depth is max.
 ### Requirements:
 
 Needs mogrify from ImageMagick to work built with support for webp, png, gif, and heic.
+
+## Optimizing JPEG and WebP images
+
+Run jpeg/jpg through jpegtran and webp back through mogrify. WebP seems to get smaller or bigger or stay the same on multiple passes (ie rerunning).
+
+### Usage:
+
+```
+./OptimizeJPEGAndWEBPs.sh
+./OptimizeJPEGAndWEBPs.sh startingDirectory
+./OptimizeJPEGAndWEBPs.sh startingDirectory depth
+```
+
+### Notes:
+
+When no argument is specified, the path defaults to `./` and depth is max.
+
+### Requirements:
+
+Needs mogrify from ImageMagick to work built with support for webp and jpegtran.
+
